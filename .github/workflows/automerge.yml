@@ -12,13 +12,13 @@ env:
   # do NOT replace ${{secrets.GITHUB_TOKEN}}, GitHub will take care of it
   MY_REPO: https://goharyhesham:${{secrets.GITHUB_TOKEN}}@github.com/goharyhesham/automerge-test2
 
-  # replace "long-lived_branch_name" with your branch name
+  # Base branch to merge into
   MY_BRANCH: test
 
   # replace it with the path to master repo
   MASTER_REPO: https://github.com/goharyhesham/automerge-test2
 
-  # replace "master" with your master branch name
+  # source branch to merge into
   MASTER_BRANCH: main
 
 jobs:
@@ -30,8 +30,6 @@ jobs:
       run: |
         git clone ${{env.MY_REPO}} -b ${{env.MY_BRANCH}} tmp
         cd tmp
-        git config user.name "Automerge Bot"
-        git config user.email "bot@example.com"
         git config pull.rebase false
         git pull ${{env.MASTER_REPO}} ${{env.MASTER_BRANCH}}
         git push

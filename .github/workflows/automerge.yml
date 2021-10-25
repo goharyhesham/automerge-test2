@@ -18,7 +18,7 @@ env:
   # replace it with the path to master repo
   MASTER_REPO: https://github.com/goharyhesham/automerge-test2
 
-  # source branch to merge into
+  # source branch to merge from
   MASTER_BRANCH: main
 
 jobs:

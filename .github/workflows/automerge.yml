@@ -10,7 +10,7 @@ env:
   # replace "github_username" with your GitHub username
   # replace "github.com/username/repo.git" with your GitHub repo path
   # do NOT replace ${{secrets.GITHUB_TOKEN}}, GitHub will take care of it
-  MY_REPO: https://goharyhesham:${{secrets.GITHUB_TOKEN}}@https://github.com/goharyhesham/automerge-test2
+  MY_REPO: goharyhesham:${{secrets.GITHUB_TOKEN}}@https://github.com/goharyhesham/automerge-test2
 
   # replace "long-lived_branch_name" with your branch name
   MY_BRANCH: test
